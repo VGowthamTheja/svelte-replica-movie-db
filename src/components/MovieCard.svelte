@@ -3,14 +3,14 @@
 </script>
 
 <div class="movie-card">
-  <a href={`/movie/${movie.id}`}>
+  <a data-sveltekit-preload-data data-sveltekit-noscroll href={`/movie/${movie.id}`}>
     {#if movie.poster_path}
       <img
         src={"https://image.tmdb.org/t/p/w500" + movie.poster_path}
         alt={movie.title}
       />
     {:else}
-      <img src="https://via.placeholder.com/500x750/000000/FFFFFF?text=NO IMAGE" alt={movie.title} />
+      <img src="https://via.placeholder.com/500x750/616161/FFFFFF?text=NO IMAGE" alt={movie.title} />
     {/if}
   </a>
   <div class="description">
